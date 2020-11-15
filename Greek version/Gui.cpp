@@ -1,7 +1,7 @@
-#include "Gui.h"
+ο»Ώ#include "Gui.h"
 /**************
-εκκίνηση γραφικού περιβάλλοντος
-και αρχικοποίση πίνακα
+ΞµΞΊΞΊΞ―Ξ½Ξ·ΟƒΞ· Ξ³ΟΞ±Ο†ΞΉΞΊΞΏΟ Ο€ΞµΟΞΉΞ²Ξ¬Ξ»Ξ»ΞΏΞ½Ο„ΞΏΟ‚
+ΞΊΞ±ΞΉ Ξ±ΟΟ‡ΞΉΞΊΞΏΟ€ΞΏΞ―ΟƒΞ· Ο€Ξ―Ξ½Ξ±ΞΊΞ±
 *******************/
 void Gui::startProcess()
 {
@@ -12,12 +12,12 @@ void Gui::startProcess()
 	return startMenu(board1);
 }
 /**************
-εμφάνιση μενού και 
-είσοδος από τον χρήστη
+ΞµΞΌΟ†Ξ¬Ξ½ΞΉΟƒΞ· ΞΌΞµΞ½ΞΏΟ ΞΊΞ±ΞΉ 
+ΞµΞ―ΟƒΞΏΞ΄ΞΏΟ‚ Ξ±Ο€Ο Ο„ΞΏΞ½ Ο‡ΟΞ®ΟƒΟ„Ξ·
 *******************/
 void Gui::startMenu(Board b){ 
 
- string message= "ΕΠΙΛΟΓΕΣ: (N)EO ΠΑΙΧΝΙΔΙ / (Φ)ΟΡΤΩΣΗ  ΠΑΙΧΝΙΔΙΟΥ / Ε(Ξ)ΟΔΟΣ :  "  ;
+ string message= "Ξ•Ξ Ξ™Ξ›ΞΞ“Ξ•Ξ£: (N)EO Ξ Ξ‘Ξ™Ξ§ΞΞ™Ξ”Ξ™ / (Ξ¦)ΞΞ΅Ξ¤Ξ©Ξ£Ξ—  Ξ Ξ‘Ξ™Ξ§ΞΞ™Ξ”Ξ™ΞΞ¥ / Ξ•(Ξ)ΞΞ”ΞΞ£ :  "  ;
  
  	HWND hwnd = GetConsoleWindow();
 	if( hwnd != NULL )
@@ -64,8 +64,8 @@ cout << "                                                                       
 return takeStartInput(&b, message);    
 }
 /**************
-όλοι οι διάλογοι προγράμματος-χρήστη αλλά και η λειτουργικότητα
-κατα την διάρκεια μιας παρτίδας
+ΟΞ»ΞΏΞΉ ΞΏΞΉ Ξ΄ΞΉΞ¬Ξ»ΞΏΞ³ΞΏΞΉ Ο€ΟΞΏΞ³ΟΞ¬ΞΌΞΌΞ±Ο„ΞΏΟ‚-Ο‡ΟΞ®ΟƒΟ„Ξ· Ξ±Ξ»Ξ»Ξ¬ ΞΊΞ±ΞΉ Ξ· Ξ»ΞµΞΉΟ„ΞΏΟ…ΟΞ³ΞΉΞΊΟΟ„Ξ·Ο„Ξ±
+ΞΊΞ±Ο„Ξ± Ο„Ξ·Ξ½ Ξ΄ΞΉΞ¬ΟΞΊΞµΞΉΞ± ΞΌΞΉΞ±Ο‚ Ο€Ξ±ΟΟ„Ξ―Ξ΄Ξ±Ο‚
 *******************/
 void Gui::newGame (Board board1) 
 {
@@ -86,30 +86,30 @@ void Gui::newGame (Board board1)
 		bool input1Flag=false;
 		bool input2Flag=false;
 		bool input3Flag = false;
-		if (flag) {	piecemsg = "άσπρ"; piececlr="WHITE"; } else {piecemsg = "μαύρ"; piececlr="BLACK";	}
+		if (flag) {	piecemsg = "Ξ¬ΟƒΟ€Ο"; piececlr="WHITE"; } else {piecemsg = "ΞΌΞ±ΟΟ"; piececlr="BLACK";	}
 		system("cls");
 		refresh(board1);
 		if((!white.empty()))
 		{
-			cout << "Αιχμαλωτισμένα άσπρα : ";
+			cout << "Ξ‘ΞΉΟ‡ΞΌΞ±Ξ»Ο‰Ο„ΞΉΟƒΞΌΞ­Ξ½Ξ± Ξ¬ΟƒΟ€ΟΞ± : ";
 			for ( i=0; i<white.size()-1; ++i)
     			cout  << white[i]<<", ";
     		cout  << white[white.size()-1]<<endl;
     	}
 		if((!black.empty()))
 		{
-			cout << "Αιχμαλωτισμένα μαύρα : ";
+			cout << "Ξ‘ΞΉΟ‡ΞΌΞ±Ξ»Ο‰Ο„ΞΉΟƒΞΌΞ­Ξ½Ξ± ΞΌΞ±ΟΟΞ± : ";
 			for ( i=0; i<black.size()-1; ++i)
     			cout  << black[i]<<", ";
     		cout  << black[black.size()-1]<<endl;
     	}
-		cout<< "Σειρά "+piecemsg+"ων !"<<endl;
+		cout<< "Ξ£ΞµΞΉΟΞ¬ "+piecemsg+"Ο‰Ξ½ !"<<endl;
 		do
 		{
 			input1Flag = false;
-			cout<<"Πατήστε ΣΕ για επανάληψη κινή(ΣΕ)ων ή \n";
-			if (flag)  cout<<"Πατήστε ΣΗ για αποθήκευ(ΣΗ) παιχνιδιού ή \n";
-			takeInput(input1,"Πληκτρολογήστε θέση "+piecemsg +"ου πιονιού: ");
+			cout<<"Ξ Ξ±Ο„Ξ®ΟƒΟ„Ξµ Ξ£Ξ• Ξ³ΞΉΞ± ΞµΟ€Ξ±Ξ½Ξ¬Ξ»Ξ·ΟΞ· ΞΊΞΉΞ½Ξ®(Ξ£Ξ•)Ο‰Ξ½ Ξ® \n";
+			if (flag)  cout<<"Ξ Ξ±Ο„Ξ®ΟƒΟ„Ξµ Ξ£Ξ— Ξ³ΞΉΞ± Ξ±Ο€ΞΏΞΈΞ®ΞΊΞµΟ…(Ξ£Ξ—) Ο€Ξ±ΞΉΟ‡Ξ½ΞΉΞ΄ΞΉΞΏΟ Ξ® \n";
+			takeInput(input1,"Ξ Ξ»Ξ·ΞΊΟ„ΟΞΏΞ»ΞΏΞ³Ξ®ΟƒΟ„Ξµ ΞΈΞ­ΟƒΞ· "+piecemsg +"ΞΏΟ… Ο€ΞΉΞΏΞ½ΞΉΞΏΟ: ");
 			if ( input1[0] =='9' && input1[1] =='R')  
 			{ 
 				Board board2= board1;
@@ -120,39 +120,39 @@ void Gui::newGame (Board board1)
 				for(i=0; i<moves.size(); ++i) 
 				{
 					board2.makeMove((*moves[i]).getNow(), (*moves[i]).getNext());
-					cout<<" Πιέστε Enter για την επόμενη κίνηση";
+					cout<<" Ξ ΞΉΞ­ΟƒΟ„Ξµ Enter Ξ³ΞΉΞ± Ο„Ξ·Ξ½ ΞµΟ€ΟΞΌΞµΞ½Ξ· ΞΊΞ―Ξ½Ξ·ΟƒΞ·";
 					getchar(); system("cls");
 					refresh(board2);
 				}
-    			cout<<"Tέλος κινήσεων. Enter για επιστροφή στο παιχνίδι"; getchar(); input1Flag=true; continue;				
+    			cout<<"TΞ­Ξ»ΞΏΟ‚ ΞΊΞΉΞ½Ξ®ΟƒΞµΟ‰Ξ½. Enter Ξ³ΞΉΞ± ΞµΟ€ΞΉΟƒΟ„ΟΞΏΟ†Ξ® ΟƒΟ„ΞΏ Ο€Ξ±ΞΉΟ‡Ξ½Ξ―Ξ΄ΞΉ"; getchar(); input1Flag=true; continue;				
 				
 			}
 			if ( input1[0] =='9' && input1[1] =='9')  
 			{
 				if (piececlr != "WHITE")
 				{ 
-					cout<< "!!Η αποθήκευση γίνεται στην σειρά των άσπρων!! "<<endl; 
+					cout<< "!!Ξ— Ξ±Ο€ΞΏΞΈΞ®ΞΊΞµΟ…ΟƒΞ· Ξ³Ξ―Ξ½ΞµΟ„Ξ±ΞΉ ΟƒΟ„Ξ·Ξ½ ΟƒΞµΞΉΟΞ¬ Ο„Ο‰Ξ½ Ξ¬ΟƒΟ€ΟΟ‰Ξ½!! "<<endl; 
 					input1Flag = true; 
 					continue;
 				}
 				else
 				{
 					board1.writeFile();
-					cout<< "!!Το παιχνίδι αποθκέυτηκε στο αρχείο uniwa.chess!! "<<endl; 
+					cout<< "!!Ξ¤ΞΏ Ο€Ξ±ΞΉΟ‡Ξ½Ξ―Ξ΄ΞΉ Ξ±Ο€ΞΏΞΈΞΊΞ­Ο…Ο„Ξ·ΞΊΞµ ΟƒΟ„ΞΏ Ξ±ΟΟ‡ΞµΞ―ΞΏ uniwa.chess!! "<<endl; 
 					input1Flag = true; 
 					continue;					
 				}
 			}
    			if (board1.getSquares((int)input1[1]-'0', (int)input1[0]-'0').getEmpty() ) 
 			{
-				cout<<"!!Δεν υπάρχει πιόνι εδώ!! "<<endl; 
+				cout<<"!!Ξ”ΞµΞ½ Ο…Ο€Ξ¬ΟΟ‡ΞµΞΉ Ο€ΞΉΟΞ½ΞΉ ΞµΞ΄Ο!! "<<endl; 
 				input1Flag = true; 
 				continue;
 			}
 
 			if (board1.getSquares((int)input1[1]-'0',(int)input1[0]-'0').getPiece()->getColor() != piececlr)  
 			{
-				cout<< "!!Λάθος πιόνι!! "<<endl; 
+				cout<< "!!Ξ›Ξ¬ΞΈΞΏΟ‚ Ο€ΞΉΟΞ½ΞΉ!! "<<endl; 
 				input1Flag = true; 
 				continue;
 			}
@@ -162,11 +162,11 @@ void Gui::newGame (Board board1)
 		{
 			input2Flag=false;
 			input3Flag = false;
-			takeInput(input2,"Πληκτρολογήστε επιθυμητή θέση \nή ΠΡ ή PR(en) για νέα προσπάθεια: ");
+			takeInput(input2,"Ξ Ξ»Ξ·ΞΊΟ„ΟΞΏΞ»ΞΏΞ³Ξ®ΟƒΟ„Ξµ ΞµΟ€ΞΉΞΈΟ…ΞΌΞ·Ο„Ξ® ΞΈΞ­ΟƒΞ· \nΞ® Ξ Ξ΅ Ξ® PR(en) Ξ³ΞΉΞ± Ξ½Ξ­Ξ± Ο€ΟΞΏΟƒΟ€Ξ¬ΞΈΞµΞΉΞ±: ");
 			if (! (input2[0] == '8' && input2[1] == '8' ) )
 			{
-				if (input1[0]== input2[0] && input1[1]== input2[1] ) {cout<<"!!Μη αποδεκτή κίνηση!!"<<endl; input2Flag = true; continue;}
-				if (  board1.getSquares((int)input2[1]-'0', (int)input2[0]-'0').getPiece()->getColor() == piececlr) {cout<<"!!Δεν γίνετε να αιχμαλωτίσετε πιόνι ίδιου χρώματος!!"<<endl; input2Flag = true; continue;}
+				if (input1[0]== input2[0] && input1[1]== input2[1] ) {cout<<"!!ΞΞ· Ξ±Ο€ΞΏΞ΄ΞµΞΊΟ„Ξ® ΞΊΞ―Ξ½Ξ·ΟƒΞ·!!"<<endl; input2Flag = true; continue;}
+				if (  board1.getSquares((int)input2[1]-'0', (int)input2[0]-'0').getPiece()->getColor() == piececlr) {cout<<"!!Ξ”ΞµΞ½ Ξ³Ξ―Ξ½ΞµΟ„Ξµ Ξ½Ξ± Ξ±ΞΉΟ‡ΞΌΞ±Ξ»Ο‰Ο„Ξ―ΟƒΞµΟ„Ξµ Ο€ΞΉΟΞ½ΞΉ Ξ―Ξ΄ΞΉΞΏΟ… Ο‡ΟΟΞΌΞ±Ο„ΞΏΟ‚!!"<<endl; input2Flag = true; continue;}
 			
 			}
 			else if (input2[0] == '8' && input2[1] == '8' ) { input3Flag = true; break; }
@@ -187,7 +187,7 @@ void Gui::newGame (Board board1)
 		}
 		else
 		{
-			cout<< "!!Λάθος κίνηση πιονιού!!! \n(Πιέστε enter για συνέχεια) "<<endl; getchar(); continue;
+			cout<< "!!Ξ›Ξ¬ΞΈΞΏΟ‚ ΞΊΞ―Ξ½Ξ·ΟƒΞ· Ο€ΞΉΞΏΞ½ΞΉΞΏΟ!!! \n(Ξ ΞΉΞ­ΟƒΟ„Ξµ enter Ξ³ΞΉΞ± ΟƒΟ…Ξ½Ξ­Ο‡ΞµΞΉΞ±) "<<endl; getchar(); continue;
 		}
 		flag=  !flag;
 		if (piececlr== "WHITE") checkColor="BLACK"; else  checkColor="WHITE";
@@ -196,11 +196,11 @@ void Gui::newGame (Board board1)
 	system("cls");
 	refresh(board1);
 	cout << endMessage ;
-	cout << "Πιέστε enter για συνέχεια ";  getchar();
+	cout << "Ξ ΞΉΞ­ΟƒΟ„Ξµ enter Ξ³ΞΉΞ± ΟƒΟ…Ξ½Ξ­Ο‡ΞµΞΉΞ± ";  getchar();
 	return startProcess();
 }
 /**************
-επανεκτύπωση πίνακα με τα νέα δεδομένα (για κάθε κίνηση)
+ΞµΟ€Ξ±Ξ½ΞµΞΊΟ„ΟΟ€Ο‰ΟƒΞ· Ο€Ξ―Ξ½Ξ±ΞΊΞ± ΞΌΞµ Ο„Ξ± Ξ½Ξ­Ξ± Ξ΄ΞµΞ΄ΞΏΞΌΞ­Ξ½Ξ± (Ξ³ΞΉΞ± ΞΊΞ¬ΞΈΞµ ΞΊΞ―Ξ½Ξ·ΟƒΞ·)
 *******************/
  void Gui::refresh(Board b)
 {
@@ -216,14 +216,14 @@ void Gui::newGame (Board board1)
 	DeleteMenu(hMenu, SC_MAXIMIZE, MF_BYCOMMAND) ;
 	DeleteMenu(hMenu, SC_SIZE, MF_BYCOMMAND) ;
 	cout<<endl;
-   	cout << " ΣΚΑΚΙ 2019 ΕΡΓΑΣΤΗΡΙΟ ΑΝΤ/ΦΟΥΣ ΠΡΟΓ/ΣΜΟΥ "<<endl;
-   	cout << " ΠΑΝΑΓΙΩΤΗΣ ΚΛΗΡΟΝΟΜΟΣ AM: 711151128"<<endl<<endl;
+   	cout << " Ξ£ΞΞ‘ΞΞ™ 2019 Ξ•Ξ΅Ξ“Ξ‘Ξ£Ξ¤Ξ—Ξ΅Ξ™Ξ Ξ‘ΞΞ¤/Ξ¦ΞΞ¥Ξ£ Ξ Ξ΅ΞΞ“/Ξ£ΞΞΞ¥ "<<endl;
+   	cout << " Ξ Ξ‘ΞΞ‘Ξ“Ξ™Ξ©Ξ¤Ξ—Ξ£ ΞΞ›Ξ—Ξ΅ΞΞΞΞΞΞ£ AM: 711151128"<<endl<<endl;
    	b.printBoard(hConsole);
 	cout << endl;
    	
 }
 /**************
-είσοδος από το αρχικό μενού
+ΞµΞ―ΟƒΞΏΞ΄ΞΏΟ‚ Ξ±Ο€Ο Ο„ΞΏ Ξ±ΟΟ‡ΞΉΞΊΟ ΞΌΞµΞ½ΞΏΟ
 *******************/
 void Gui::takeStartInput( Board * b , string message)
 {
@@ -237,7 +237,7 @@ void Gui::takeStartInput( Board * b , string message)
 
    	 	if (inputStr.length() != 1)
    	 	{
-    	    cout << "Λάθος εισαγωγή ! "<<endl<<"Πλήκτρολογήστε 1 χαρακτήρα"<<endl;
+    	    cout << "Ξ›Ξ¬ΞΈΞΏΟ‚ ΞµΞΉΟƒΞ±Ξ³Ο‰Ξ³Ξ® ! "<<endl<<"Ξ Ξ»Ξ®ΞΊΟ„ΟΞΏΞ»ΞΏΞ³Ξ®ΟƒΟ„Ξµ 1 Ο‡Ξ±ΟΞ±ΞΊΟ„Ξ®ΟΞ±"<<endl;
         	continue;
     	}
     	strcpy(inputChars, inputStr.c_str());
@@ -246,22 +246,22 @@ void Gui::takeStartInput( Board * b , string message)
     	{
       		case 'N' :  
       		case 'n' :
-      		case 'Ν' :
-			case 'ν' :  return newGame(*b);	break;
-      		case 'Φ' :  
-      		case 'φ' :
+      		case 'Ξ' :
+			case 'Ξ½' :  return newGame(*b);	break;
+      		case 'Ξ¦' :  
+      		case 'Ο†' :
       		case 'F' :
 			case 'f' :  (*b).readFile(); return newGame((*b)); break;
-			case 'Ξ' :  
-      		case 'ξ' :
+			case 'Ξ' :  
+      		case 'ΞΎ' :
       		case 'J' :
 			case 'j' :	return ;	
-     		default  : cout << "Λάθος εισαγωγή ! "<<endl<<"Πλήκτρολογήστε σωστή επιλογή"<<endl;continue;
+     		default  : cout << "Ξ›Ξ¬ΞΈΞΏΟ‚ ΞµΞΉΟƒΞ±Ξ³Ο‰Ξ³Ξ® ! "<<endl<<"Ξ Ξ»Ξ®ΞΊΟ„ΟΞΏΞ»ΞΏΞ³Ξ®ΟƒΟ„Ξµ ΟƒΟ‰ΟƒΟ„Ξ® ΞµΟ€ΞΉΞ»ΞΏΞ³Ξ®"<<endl;continue;
    	 	}
    	}
 }
 /**************
-είσοδος κατα την διάρκεια της παρτίδας
+ΞµΞ―ΟƒΞΏΞ΄ΞΏΟ‚ ΞΊΞ±Ο„Ξ± Ο„Ξ·Ξ½ Ξ΄ΞΉΞ¬ΟΞΊΞµΞΉΞ± Ο„Ξ·Ο‚ Ο€Ξ±ΟΟ„Ξ―Ξ΄Ξ±Ο‚
 *******************/
 void Gui::takeInput( char  input[], string message)
 { 
@@ -276,54 +276,54 @@ void Gui::takeInput( char  input[], string message)
 
    	 	if (inputStr.length() != 2)
    	 	{
-    	    cout << "Λάθος εισαγωγή ! "<<endl<<"Πλήκτρολογήστε 2 χαρακτήρες"<<endl;
+    	    cout << "Ξ›Ξ¬ΞΈΞΏΟ‚ ΞµΞΉΟƒΞ±Ξ³Ο‰Ξ³Ξ® ! "<<endl<<"Ξ Ξ»Ξ®ΞΊΟ„ΟΞΏΞ»ΞΏΞ³Ξ®ΟƒΟ„Ξµ 2 Ο‡Ξ±ΟΞ±ΞΊΟ„Ξ®ΟΞµΟ‚"<<endl;
         	continue;
     	}
     	strcpy(inputChars, inputStr.c_str());
       	
 		switch(inputChars[0])
     	{
-      		case 'Α' :  
-      		case 'α' :
+      		case 'Ξ‘' :  
+      		case 'Ξ±' :
       		case 'a' :
 			case 'A' :  inputChars[0] ='0'; break;
-			case 'Β' :
-			case 'β' :
+			case 'Ξ’' :
+			case 'Ξ²' :
 			case 'b' :
       		case 'B' :  inputChars[0] ='1'; break;
-      		case 'Γ' :
-    	  	case 'γ' :
+      		case 'Ξ“' :
+    	  	case 'Ξ³' :
     	  	case 'c' :
    		   	case 'C' :  inputChars[0] ='2'; break;
-   		   	case 'Δ' :
-   		   	case 'δ' :
+   		   	case 'Ξ”' :
+   		   	case 'Ξ΄' :
    		   	case 'd' :
       		case 'D' :  inputChars[0] ='3'; break;
-      		case 'Ε' :
-      		case 'ε' :
+      		case 'Ξ•' :
+      		case 'Ξµ' :
       		case 'e' :
       		case 'E' :  inputChars[0] ='4'; break;
-     	 	case 'Ζ' :
-      		case 'ζ' :
+     	 	case 'Ξ–' :
+      		case 'Ξ¶' :
       		case 'f' :
       		case 'F' :  inputChars[0] ='5'; break;
-      		case 'Η' :
-      		case 'η' :
+      		case 'Ξ—' :
+      		case 'Ξ·' :
       		case 'g' :
       		case 'G' :  inputChars[0] ='6'; break;
-      		case 'Θ' :
-      		case 'θ' :
+      		case 'Ξ' :
+      		case 'ΞΈ' :
       		case 'h' :
       		case 'H' :  inputChars[0] ='7'; break;
       		case 'P' :
       		case 'p' :
-      		case 'Π' :
-      		case 'π' : inputChars[0] ='8'; break;
-      		case 'Σ' :
-      		case 'σ' :
+      		case 'Ξ ' :
+      		case 'Ο€' : inputChars[0] ='8'; break;
+      		case 'Ξ£' :
+      		case 'Οƒ' :
       		case 'S' :
       		case 's' : inputChars[0] ='9'; break;
-     		default  : cout << "Λάθος εισαγωγή ! "<<endl<<"Πλήκτρολογήστε σωστές συντεταγμένες"<<endl;continue;
+     		default  : cout << "Ξ›Ξ¬ΞΈΞΏΟ‚ ΞµΞΉΟƒΞ±Ξ³Ο‰Ξ³Ξ® ! "<<endl<<"Ξ Ξ»Ξ®ΞΊΟ„ΟΞΏΞ»ΞΏΞ³Ξ®ΟƒΟ„Ξµ ΟƒΟ‰ΟƒΟ„Ξ­Ο‚ ΟƒΟ…Ξ½Ο„ΞµΟ„Ξ±Ξ³ΞΌΞ­Ξ½ΞµΟ‚"<<endl;continue;
    	 	}
     	switch(inputChars[1])
     	{
@@ -337,17 +337,17 @@ void Gui::takeInput( char  input[], string message)
       		case '8' :inputChars[1] ='7'; break;
       		case 'r' :
       		case 'R' :
-      		case 'ρ' :
-      		case 'Ρ' : inputChars[1] ='8'; break;
-      		case 'Η' :
-      		case 'η' :
+      		case 'Ο' :
+      		case 'Ξ΅' : inputChars[1] ='8'; break;
+      		case 'Ξ—' :
+      		case 'Ξ·' :
       		case 'H' :
       		case 'h' : inputChars[1] ='9'; break;
-      		case 'Ε' :
-      		case 'ε' :
+      		case 'Ξ•' :
+      		case 'Ξµ' :
       		case 'E' :
       		case 'e' : inputChars[1] ='R'; break;
-      		default  : cout << "Λάθος εισαγωγή ! "<<endl<<"Πλήκτρολογήστε σωστές συντεταγμένες"<<endl;continue;
+      		default  : cout << "Ξ›Ξ¬ΞΈΞΏΟ‚ ΞµΞΉΟƒΞ±Ξ³Ο‰Ξ³Ξ® ! "<<endl<<"Ξ Ξ»Ξ®ΞΊΟ„ΟΞΏΞ»ΞΏΞ³Ξ®ΟƒΟ„Ξµ ΟƒΟ‰ΟƒΟ„Ξ­Ο‚ ΟƒΟ…Ξ½Ο„ΞµΟ„Ξ±Ξ³ΞΌΞ­Ξ½ΞµΟ‚"<<endl;continue;
     	}
     	flag = false;
      	input[0 ] = inputChars[0]; input[1] = inputChars[1];

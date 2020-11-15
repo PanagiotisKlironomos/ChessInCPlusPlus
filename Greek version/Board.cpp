@@ -1,7 +1,7 @@
-#include "Board.h"
+ο»Ώ#include "Board.h"
 /**************
-Διαβάζει από σε ένα binary αρχείο με την ονομασία uniwa.chess
-ένα αντικέιμενο τύπου  Board
+Ξ”ΞΉΞ±Ξ²Ξ¬Ξ¶ΞµΞΉ Ξ±Ο€Ο ΟƒΞµ Ξ­Ξ½Ξ± binary Ξ±ΟΟ‡ΞµΞ―ΞΏ ΞΌΞµ Ο„Ξ·Ξ½ ΞΏΞ½ΞΏΞΌΞ±ΟƒΞ―Ξ± uniwa.chess
+Ξ­Ξ½Ξ± Ξ±Ξ½Ο„ΞΉΞΊΞ­ΞΉΞΌΞµΞ½ΞΏ Ο„ΟΟ€ΞΏΟ…  Board
 *******************/
 
 void Board::readFile()
@@ -14,8 +14,8 @@ void Board::readFile()
 }
 
 /**************
-Γράφει σε ένα binary αρχείο με την ονομασία uniwa.chess
-ένα αντικέιμενο τύπου  Board
+Ξ“ΟΞ¬Ο†ΞµΞΉ ΟƒΞµ Ξ­Ξ½Ξ± binary Ξ±ΟΟ‡ΞµΞ―ΞΏ ΞΌΞµ Ο„Ξ·Ξ½ ΞΏΞ½ΞΏΞΌΞ±ΟƒΞ―Ξ± uniwa.chess
+Ξ­Ξ½Ξ± Ξ±Ξ½Ο„ΞΉΞΊΞ­ΞΉΞΌΞµΞ½ΞΏ Ο„ΟΟ€ΞΏΟ…  Board
 *******************/
 void Board::writeFile()            
 { 
@@ -39,8 +39,8 @@ Board::Board (const Board &x)
 			squares[i][j]=x.squares[i][j];
 }
 /**************
-αρχικοποιεί καθένα απο τα τετράγωνα της σκακιέρας με 
-τα αντίστοιχα πιόνια
+Ξ±ΟΟ‡ΞΉΞΊΞΏΟ€ΞΏΞΉΞµΞ― ΞΊΞ±ΞΈΞ­Ξ½Ξ± Ξ±Ο€ΞΏ Ο„Ξ± Ο„ΞµΟ„ΟΞ¬Ξ³Ο‰Ξ½Ξ± Ο„Ξ·Ο‚ ΟƒΞΊΞ±ΞΊΞΉΞ­ΟΞ±Ο‚ ΞΌΞµ 
+Ο„Ξ± Ξ±Ξ½Ο„Ξ―ΟƒΟ„ΞΏΞΉΟ‡Ξ± Ο€ΞΉΟΞ½ΞΉΞ±
 *******************/
 void Board::initBoard()
 {
@@ -78,8 +78,8 @@ void Board::initBoard()
 	
 }
 /**************
-Εκτύπωση της σκακιέρας με χρήση της βιβλιοθήκης windows.h
-για καλύτερο οπτικό αποτέλεσμα
+Ξ•ΞΊΟ„ΟΟ€Ο‰ΟƒΞ· Ο„Ξ·Ο‚ ΟƒΞΊΞ±ΞΊΞΉΞ­ΟΞ±Ο‚ ΞΌΞµ Ο‡ΟΞ®ΟƒΞ· Ο„Ξ·Ο‚ Ξ²ΞΉΞ²Ξ»ΞΉΞΏΞΈΞ®ΞΊΞ·Ο‚ windows.h
+Ξ³ΞΉΞ± ΞΊΞ±Ξ»ΟΟ„ΞµΟΞΏ ΞΏΟ€Ο„ΞΉΞΊΟ Ξ±Ο€ΞΏΟ„Ξ­Ξ»ΞµΟƒΞΌΞ±
 *******************/
 void Board::printBoard(HANDLE WINAPI hConsole) {
 	using namespace std;
@@ -129,8 +129,8 @@ void Board::printBoard(HANDLE WINAPI hConsole) {
 }
 
 /**************
-Μετακίνηση ενός πιονιού σε ένα άλλο τετράγωνο
-της σκακιέρας
+ΞΞµΟ„Ξ±ΞΊΞ―Ξ½Ξ·ΟƒΞ· ΞµΞ½ΟΟ‚ Ο€ΞΉΞΏΞ½ΞΉΞΏΟ ΟƒΞµ Ξ­Ξ½Ξ± Ξ¬Ξ»Ξ»ΞΏ Ο„ΞµΟ„ΟΞ¬Ξ³Ο‰Ξ½ΞΏ
+Ο„Ξ·Ο‚ ΟƒΞΊΞ±ΞΊΞΉΞ­ΟΞ±Ο‚
 *******************/
 bool Board::makeMove(Position * now, Position * next)
 {
@@ -141,8 +141,8 @@ bool Board::makeMove(Position * now, Position * next)
 	
 }
 /**************
-έλεγχος ορθότητας μετακίνησης ενός 
-πιονιού σε ένα άλλο τετράγωνοτης σκακιέρας
+Ξ­Ξ»ΞµΞ³Ο‡ΞΏΟ‚ ΞΏΟΞΈΟΟ„Ξ·Ο„Ξ±Ο‚ ΞΌΞµΟ„Ξ±ΞΊΞ―Ξ½Ξ·ΟƒΞ·Ο‚ ΞµΞ½ΟΟ‚ 
+Ο€ΞΉΞΏΞ½ΞΉΞΏΟ ΟƒΞµ Ξ­Ξ½Ξ± Ξ¬Ξ»Ξ»ΞΏ Ο„ΞµΟ„ΟΞ¬Ξ³Ο‰Ξ½ΞΏΟ„Ξ·Ο‚ ΟƒΞΊΞ±ΞΊΞΉΞ­ΟΞ±Ο‚
 *******************/
 bool Board::isMoveValid(Position * now, Position * next)
 {
@@ -181,8 +181,8 @@ bool Board::isMoveValid(Position * now, Position * next)
 	return false; // tha svistei
 }
 /**************
-έλεγχος ορθότητας μετακίνησης ενός 
-πιονιού στρατιωτάκι σε ένα άλλο τετράγωνο της σκακιέρας
+Ξ­Ξ»ΞµΞ³Ο‡ΞΏΟ‚ ΞΏΟΞΈΟΟ„Ξ·Ο„Ξ±Ο‚ ΞΌΞµΟ„Ξ±ΞΊΞ―Ξ½Ξ·ΟƒΞ·Ο‚ ΞµΞ½ΟΟ‚ 
+Ο€ΞΉΞΏΞ½ΞΉΞΏΟ ΟƒΟ„ΟΞ±Ο„ΞΉΟ‰Ο„Ξ¬ΞΊΞΉ ΟƒΞµ Ξ­Ξ½Ξ± Ξ¬Ξ»Ξ»ΞΏ Ο„ΞµΟ„ΟΞ¬Ξ³Ο‰Ξ½ΞΏ Ο„Ξ·Ο‚ ΟƒΞΊΞ±ΞΊΞΉΞ­ΟΞ±Ο‚
 *******************/
 bool Board::pawnMoveValid(Position * now, Position * next)
 {
@@ -225,8 +225,8 @@ bool Board::pawnMoveValid(Position * now, Position * next)
 		return false;
 }
 /**************
-έλεγχος ορθότητας μετακίνησης ενός 
-πιονιού αλογο σε ένα άλλο τετράγωνο της σκακιέρας
+Ξ­Ξ»ΞµΞ³Ο‡ΞΏΟ‚ ΞΏΟΞΈΟΟ„Ξ·Ο„Ξ±Ο‚ ΞΌΞµΟ„Ξ±ΞΊΞ―Ξ½Ξ·ΟƒΞ·Ο‚ ΞµΞ½ΟΟ‚ 
+Ο€ΞΉΞΏΞ½ΞΉΞΏΟ Ξ±Ξ»ΞΏΞ³ΞΏ ΟƒΞµ Ξ­Ξ½Ξ± Ξ¬Ξ»Ξ»ΞΏ Ο„ΞµΟ„ΟΞ¬Ξ³Ο‰Ξ½ΞΏ Ο„Ξ·Ο‚ ΟƒΞΊΞ±ΞΊΞΉΞ­ΟΞ±Ο‚
 *******************/
 bool Board::knightMoveValid(Position * now, Position * next)
 {
@@ -251,8 +251,8 @@ bool Board::knightMoveValid(Position * now, Position * next)
 		return false;
 }
 /**************
-έλεγχος ορθότητας μετακίνησης ενός 
-πιονιού αξιωματικός σε ένα άλλο τετράγωνο της σκακιέρας
+Ξ­Ξ»ΞµΞ³Ο‡ΞΏΟ‚ ΞΏΟΞΈΟΟ„Ξ·Ο„Ξ±Ο‚ ΞΌΞµΟ„Ξ±ΞΊΞ―Ξ½Ξ·ΟƒΞ·Ο‚ ΞµΞ½ΟΟ‚ 
+Ο€ΞΉΞΏΞ½ΞΉΞΏΟ Ξ±ΞΎΞΉΟ‰ΞΌΞ±Ο„ΞΉΞΊΟΟ‚ ΟƒΞµ Ξ­Ξ½Ξ± Ξ¬Ξ»Ξ»ΞΏ Ο„ΞµΟ„ΟΞ¬Ξ³Ο‰Ξ½ΞΏ Ο„Ξ·Ο‚ ΟƒΞΊΞ±ΞΊΞΉΞ­ΟΞ±Ο‚
 *******************/
 bool Board::bishopMoveValid(Position * now, Position * next)
 {
@@ -279,8 +279,8 @@ bool Board::bishopMoveValid(Position * now, Position * next)
 	return false;
 }
 /**************
-έλεγχος ορθότητας μετακίνησης ενός 
-πιονιού πυργος σε ένα άλλο τετράγωνο της σκακιέρας
+Ξ­Ξ»ΞµΞ³Ο‡ΞΏΟ‚ ΞΏΟΞΈΟΟ„Ξ·Ο„Ξ±Ο‚ ΞΌΞµΟ„Ξ±ΞΊΞ―Ξ½Ξ·ΟƒΞ·Ο‚ ΞµΞ½ΟΟ‚ 
+Ο€ΞΉΞΏΞ½ΞΉΞΏΟ Ο€Ο…ΟΞ³ΞΏΟ‚ ΟƒΞµ Ξ­Ξ½Ξ± Ξ¬Ξ»Ξ»ΞΏ Ο„ΞµΟ„ΟΞ¬Ξ³Ο‰Ξ½ΞΏ Ο„Ξ·Ο‚ ΟƒΞΊΞ±ΞΊΞΉΞ­ΟΞ±Ο‚
 *******************/
 bool Board::rookMoveValid(Position * now, Position * next)
 {
@@ -319,8 +319,8 @@ bool Board::rookMoveValid(Position * now, Position * next)
 	
 }
 /**************
-έλεγχος ορθότητας μετακίνησης ενός 
-πιονιού βασίλισσα σε ένα άλλο τετράγωνο της σκακιέρας
+Ξ­Ξ»ΞµΞ³Ο‡ΞΏΟ‚ ΞΏΟΞΈΟΟ„Ξ·Ο„Ξ±Ο‚ ΞΌΞµΟ„Ξ±ΞΊΞ―Ξ½Ξ·ΟƒΞ·Ο‚ ΞµΞ½ΟΟ‚ 
+Ο€ΞΉΞΏΞ½ΞΉΞΏΟ Ξ²Ξ±ΟƒΞ―Ξ»ΞΉΟƒΟƒΞ± ΟƒΞµ Ξ­Ξ½Ξ± Ξ¬Ξ»Ξ»ΞΏ Ο„ΞµΟ„ΟΞ¬Ξ³Ο‰Ξ½ΞΏ Ο„Ξ·Ο‚ ΟƒΞΊΞ±ΞΊΞΉΞ­ΟΞ±Ο‚
 *******************/
 bool Board::queenMoveValid(Position * now, Position * next)
 {
@@ -369,8 +369,8 @@ bool Board::queenMoveValid(Position * now, Position * next)
 	
 }
 /**************
-έλεγχος ορθότητας μετακίνησης ενός 
-πιονιού βασιλιά σε ένα άλλο τετράγωνο της σκακιέρας
+Ξ­Ξ»ΞµΞ³Ο‡ΞΏΟ‚ ΞΏΟΞΈΟΟ„Ξ·Ο„Ξ±Ο‚ ΞΌΞµΟ„Ξ±ΞΊΞ―Ξ½Ξ·ΟƒΞ·Ο‚ ΞµΞ½ΟΟ‚ 
+Ο€ΞΉΞΏΞ½ΞΉΞΏΟ Ξ²Ξ±ΟƒΞΉΞ»ΞΉΞ¬ ΟƒΞµ Ξ­Ξ½Ξ± Ξ¬Ξ»Ξ»ΞΏ Ο„ΞµΟ„ΟΞ¬Ξ³Ο‰Ξ½ΞΏ Ο„Ξ·Ο‚ ΟƒΞΊΞ±ΞΊΞΉΞ­ΟΞ±Ο‚
 *******************/
 bool Board::kingMoveValid(Position * now, Position * next)
 {
@@ -389,7 +389,7 @@ bool Board::kingMoveValid(Position * now, Position * next)
 }
 
 /**************
-έλεγχος ρουά του εκάστοτε βασιλιά
+Ξ­Ξ»ΞµΞ³Ο‡ΞΏΟ‚ ΟΞΏΟ…Ξ¬ Ο„ΞΏΟ… ΞµΞΊΞ¬ΟƒΟ„ΞΏΟ„Ξµ Ξ²Ξ±ΟƒΞΉΞ»ΞΉΞ¬
 *******************/
 bool Board::IsInCheck(string Color) {
 	int iRow,iCol;
@@ -398,9 +398,9 @@ bool Board::IsInCheck(string Color) {
 	int iKingCol;
 	for ( iRow = 0; iRow < 8; ++iRow) {
 		for ( iCol = 0; iCol < 8; ++iCol) {
-			if (squares[iRow][iCol].getPiece()->getType() != '0') { // αν δεν ειναι blank
-				if (squares[iRow][iCol].getPiece()->getColor() == Color) { // και ειναι ιδιου χρωματος
-					if (squares[iRow][iCol].getPiece()->getType() == 'K' || squares[iRow][iCol].getPiece()->getType()== 'k' ) { //και τυπου king
+			if (squares[iRow][iCol].getPiece()->getType() != '0') { // Ξ±Ξ½ Ξ΄ΞµΞ½ ΞµΞΉΞ½Ξ±ΞΉ blank
+				if (squares[iRow][iCol].getPiece()->getColor() == Color) { // ΞΊΞ±ΞΉ ΞµΞΉΞ½Ξ±ΞΉ ΞΉΞ΄ΞΉΞΏΟ… Ο‡ΟΟ‰ΞΌΞ±Ο„ΞΏΟ‚
+					if (squares[iRow][iCol].getPiece()->getType() == 'K' || squares[iRow][iCol].getPiece()->getType()== 'k' ) { //ΞΊΞ±ΞΉ Ο„Ο…Ο€ΞΏΟ… king
 						iKingRow = iRow;
 						iKingCol = iCol;
 					}
@@ -423,7 +423,7 @@ bool Board::IsInCheck(string Color) {
 	return false;
 }
 /**************
-έλεγχος δυνατότητας μετακίνησης ενός παίχτη
+Ξ­Ξ»ΞµΞ³Ο‡ΞΏΟ‚ Ξ΄Ο…Ξ½Ξ±Ο„ΟΟ„Ξ·Ο„Ξ±Ο‚ ΞΌΞµΟ„Ξ±ΞΊΞ―Ξ½Ξ·ΟƒΞ·Ο‚ ΞµΞ½ΟΟ‚ Ο€Ξ±Ξ―Ο‡Ο„Ξ·
 *******************/
 bool Board::CanMove(string  Color) {
 	int iMoveCol, iMoveRow,iRow,iCol;
@@ -459,20 +459,20 @@ bool Board::CanMove(string  Color) {
 		return false;
 	}
 /**************
-έλεγχος λήξης παιχνιδιού
+Ξ­Ξ»ΞµΞ³Ο‡ΞΏΟ‚ Ξ»Ξ®ΞΎΞ·Ο‚ Ο€Ξ±ΞΉΟ‡Ξ½ΞΉΞ΄ΞΉΞΏΟ
 *******************/
 bool Board::IsGameOver(string currentColor, string * endMessage) { 
 	// Check that the current player can move
 	// If not, we have a stalemate or checkmate
 	string winColor;
-	if (currentColor== "WHITE") winColor="μαύρα"; else  winColor="άσπρα";
+	if (currentColor== "WHITE") winColor="ΞΌΞ±ΟΟΞ±"; else  winColor="Ξ¬ΟƒΟ€ΟΞ±";
 	bool bCanMove=false;
 	bCanMove = CanMove(currentColor);
 	if (!bCanMove) { 
 		if (IsInCheck(currentColor)) {
-			*endMessage =  "Ρουά Ματ , κέρδισαν τα " + winColor + "!!"  ;
+			*endMessage =  "Ξ΅ΞΏΟ…Ξ¬ ΞΞ±Ο„ , ΞΊΞ­ΟΞ΄ΞΉΟƒΞ±Ξ½ Ο„Ξ± " + winColor + "!!"  ;
 		} else {
-			*endMessage = "Ισοπαλία!" ;
+			*endMessage = "Ξ™ΟƒΞΏΟ€Ξ±Ξ»Ξ―Ξ±!" ;
 		}
 	}
 	return bCanMove; 
