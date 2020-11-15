@@ -11,7 +11,7 @@ Inside the project directory
 
 
 
-# How to install gcc in Windows 10? (the easier way)
+# How to install gcc in Windows 10? (the easier way) by https://dev.to/
 
 
 GCC, abbreviation for 'GNU C Compiler' (and not Gulf Cooperation Council, like I'd assumed) is a necessity if you (or your pesky college) is into C Programming.
