@@ -1,4 +1,8 @@
-﻿#include "Board.h"
+﻿/* Copyright (C) 2019 Panagiotis Klironomos - All Rights Reserved
+ * You may use, distribute and modify this code under the
+ * terms of the GNU GENERAL PUBLIC LICENSE 
+ */
+#include "Board.h"
 /**************
 Reads from a binary file called uniwa.chess
 a Board type object

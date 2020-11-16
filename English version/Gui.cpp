@@ -1,4 +1,8 @@
-﻿#include "Gui.h"
+﻿/* Copyright (C) 2019 Panagiotis Klironomos - All Rights Reserved
+ * You may use, distribute and modify this code under the
+ * terms of the GNU GENERAL PUBLIC LICENSE 
+ */
+#include "Gui.h"
 /**************
 boot graphical interface
 and table initialization

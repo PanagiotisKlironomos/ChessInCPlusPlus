@@ -1,4 +1,8 @@
-﻿#include "Board.h"
+﻿/* Copyright (C) 2019 Panagiotis Klironomos - All Rights Reserved
+ * You may use, distribute and modify this code under the
+ * terms of the GNU GENERAL PUBLIC LICENSE 
+ */
+#include "Board.h"
 /**************
 Διαβάζει από σε ένα binary αρχείο με την ονομασία uniwa.chess
 ένα αντικέιμενο τύπου  Board
